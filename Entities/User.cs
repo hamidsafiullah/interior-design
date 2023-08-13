@@ -7,11 +7,11 @@ namespace InteriorDesign.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [MaxLength(50)]
         public string? LastName { get; set; }
@@ -23,7 +23,7 @@ namespace InteriorDesign.Entities
         [Required]
         public string Password { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
 
         public DateTime? DeletedAt { get; set; }
     }

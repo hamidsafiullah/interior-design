@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="7.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -26,13 +26,56 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\.angular\cache\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\.angular\cache\**" />
+    <EmbeddedResource Remove="ClientApp\.angular\cache\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\.angular\cache\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\.angular\cache\16.1.6\InteriorDesign\.tsbuildinfo" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_common.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_common.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_common_http.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_common_http.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_core.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_core.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_forms.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_forms.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_platform-browser.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_platform-browser.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_router.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40angular_router.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40ng-bootstrap_ng-bootstrap.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\%40ng-bootstrap_ng-bootstrap.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-4BJ7XQX3.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-4BJ7XQX3.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-5EUJBRTH.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-5EUJBRTH.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-7B4J4TFQ.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-7B4J4TFQ.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-JWTLHYQF.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-JWTLHYQF.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-K6CB7WIB.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-K6CB7WIB.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-O5UDQ6QW.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\chunk-O5UDQ6QW.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\package.json" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\tslib.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\tslib.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\zone__js.js" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\zone__js.js.map" />
+    <None Remove="ClientApp\.angular\cache\16.1.6\vite\deps\_metadata.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\.angular\" />
+    <Folder Include="DAL\EasyRepository.EFCore.Generic\" />
     <Folder Include="DTOModels\" />
+    <Folder Include="Interfaces\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
